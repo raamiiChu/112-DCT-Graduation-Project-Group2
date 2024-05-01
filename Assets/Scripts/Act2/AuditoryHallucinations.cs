@@ -35,10 +35,14 @@ public class AuditoryHallucinations : MonoBehaviour
         if (dice >= 4)
         {
             GameManager.GetInstance().BlurScreen(true);
+            StatusManager.GetInstance().setDebuffImage(0);
+            HintManager.GetInstance().ShowMission("一陣昏沉疲勞，頭痛，看不清眼前的東西……");
         }
         else
         {
             GameManager.GetInstance().ShakeCamera(5f);
+            StatusManager.GetInstance().setDebuffImage(1);
+            HintManager.GetInstance().ShowMission("一時間身體無法平衡，有種天旋地轉的感覺，好像有點想吐……");
         }
 
         gameObject.transform.position = player.transform.position;
@@ -48,13 +52,14 @@ public class AuditoryHallucinations : MonoBehaviour
             gameObject.transform.Find("Trigger").gameObject.SetActive(true);
         }
 
-        StartCoroutine(Wait());
+        StartCoroutine(Reset());
     }
 
-    private IEnumerator Wait()
+    private IEnumerator Reset()
     {
         yield return new WaitForSeconds(Random.Range(minDuration, maxDuration));
 
         GameManager.GetInstance().BlurScreen(false);
+        StatusManager.GetInstance().debuffUI.SetActive(false);
     }
 }

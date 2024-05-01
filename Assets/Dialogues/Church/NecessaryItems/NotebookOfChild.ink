@@ -56,6 +56,7 @@ INCLUDE ../../ExternalFunctions.ink
 
 ~ HideImage()
 ~ TriggerAppear()
+~ PlaySound("pick up")
 ~ Pickup()
 
 獲得物品：小孩子的日記本

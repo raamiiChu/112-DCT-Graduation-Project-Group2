@@ -9,6 +9,8 @@ INCLUDE ../../ExternalFunctions.ink
 
 然而藍圖上面的圖畫早已模糊不清，變成了一張幾乎不成形的破爛圖紙。不過由於似乎很重要，因此你還是將他帶上。
 
+~ PlaySound("pick up")
+
 獲得物品：破爛的藍圖圖紙。
 
 ~ getBlueprint = true

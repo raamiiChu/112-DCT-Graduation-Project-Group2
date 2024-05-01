@@ -6,11 +6,12 @@ INCLUDE ../../ExternalFunctions.ink
 
 你摸向掛勾處，發現這邊竟有一把生鏽的鑰匙。
 
+~ PlaySound("pick up")
+
 獲得物品：生鏽的鑰匙。
 
 ~ ShowMission("接受任務：使用鑰匙")
 ~ getBasementKey = true
-
 ~ Pickup()
 
 -> END

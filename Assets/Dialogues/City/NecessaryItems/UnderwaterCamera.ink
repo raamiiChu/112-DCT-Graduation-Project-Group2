@@ -7,6 +7,7 @@ INCLUDE ../../ExternalFunctions.ink
 
 這種相機通常具有防水外殼，以保護免受水壓和水氣的影響，能夠捕捉水下生態、珊瑚礁和其他海底物品。
 
+~ PlaySound("pick up")
 ~ Pickup()
 
 ~ getUnderwaterCamera = true

@@ -4,6 +4,9 @@ INCLUDE ../../ExternalFunctions.ink
 -> main
 
 === main ===
+
+~ HideBlackScreen()
+
 我們先看看你都帶了哪些東西出來 # speaker: Skyler #portrait: Skyler #layout: right
 
 （你簡單地向 Skyler 交代剛剛探索的經過） # speaker: Layne #portrait: Layne #layout: left

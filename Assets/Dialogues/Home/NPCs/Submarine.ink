@@ -63,11 +63,14 @@ INCLUDE ../../ExternalFunctions.ink
 # speaker: 腦內的聲音 #portrait: Narrator #layout: left
 （你從背包中取出了那塊研究員的邊角料，並且將其卡進潛水艇外部對應的位置。）
 
+~ PlaySound("hatch open")
 # speaker: 腦內的聲音 #portrait: Narrator #layout: left
 （把它裝進去後不到十秒，整台潛水艇的電力系統便啟動，並且自動打開艙門。）
 
 # speaker: Skyler #portrait: Skyler #layout: right
 他啟動了！
+
+~ ShowCG(24)
 
 # speaker: 腦內的聲音 #portrait: Narrator #layout: left
 艙門打開後，映入眼簾的是擁有駕駛座雙人座椅的狹小空間。然而更神奇的是，潛水艇裡面就像是有一股屏障一樣，導致海水沒有直接灌進其中。
@@ -82,9 +85,10 @@ INCLUDE ../../ExternalFunctions.ink
 （Layne & Skyler 一起進入到潛水艇）
 
 ~ ShowRene()
+~ ShowCG(25)
 
 # speaker: 腦內的聲音 #portrait: Narrator #layout: left
-（當你一座上座椅，你注意到潛水艇外有一個正在哭泣的聲音，你向聲音傳出的地方望去，發現是 Rene 在外頭看著你。）
+（當你一坐上座椅，你注意到潛水艇外有一個正在哭泣的聲音，你向聲音傳出的地方望去，發現是 Rene 在外頭看著你。）
 
 # speaker: Rene #portrait: Rene #layout: right
 不要再一次拋下我.......。
@@ -121,6 +125,8 @@ Rene 你在外面做什麼？趕快進來呀！
 -> DONE
 
 === CloseTheHatch ===
+~ PlaySound("hatch open")
+
 # speaker: 腦內的聲音 #portrait: Narrator #layout: left
 （你不顧 Rene 不斷哭泣，果斷地將艙門關上）
 

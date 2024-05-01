@@ -26,6 +26,8 @@ EXTERNAL ChangeScene(sceneName)
 
 EXTERNAL ShowCG(CGIndex)
 EXTERNAL HideCG()
+EXTERNAL ShowBlackScreen()
+EXTERNAL HideBlackScreen()
 
 EXTERNAL TeleportPlayer(x, y, z)
 

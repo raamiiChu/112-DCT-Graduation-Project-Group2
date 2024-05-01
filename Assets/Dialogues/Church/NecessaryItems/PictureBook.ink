@@ -27,7 +27,7 @@ INCLUDE ../../ExternalFunctions.ink
 坐寶座的要用帳幕覆庇他們。他們不再飢，不再渴；日頭和炎熱也必不傷害他們。<br>因為寶座中的羔羊必牧養他們，領他們到生命水的泉源；神也必擦去他們一切的眼淚。
 
 ~ HideImage()
-
+~ PlaySound("pick up")
 ~ Pickup()
 
 獲得物品：繪本

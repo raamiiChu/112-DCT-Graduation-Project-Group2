@@ -23,6 +23,8 @@ INCLUDE ../../ExternalFunctions.ink
 
 ~ ShowMission("完成任務：尋找教典")
 
+~ PlaySound("pick up")
+
 獲得物品：教典、飄落的紙張<br>提示：按下 I 開啟背包後，點擊物品可以查看細節
 
 ~ Pickup()

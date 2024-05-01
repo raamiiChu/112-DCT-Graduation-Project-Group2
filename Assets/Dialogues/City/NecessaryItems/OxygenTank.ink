@@ -7,6 +7,7 @@ INCLUDE ../../ExternalFunctions.ink
 
 這些壓縮氧氣的罐子通常由堅固的金屬材料製成，如鋁合金或不鏽鋼，以確保在水下環境中能夠可靠地承受水壓。
 
+~ PlaySound("pick up")
 ~ Pickup()
 
 ~ getOxygenTank = true

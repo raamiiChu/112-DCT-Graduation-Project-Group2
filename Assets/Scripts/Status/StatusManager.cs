@@ -18,7 +18,7 @@ public class StatusManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI melancholyText;
     [SerializeField] GameObject avatar;
     [SerializeField] GameObject sanitySlider;
-    [SerializeField] GameObject debuffUI;
+    [SerializeField] public GameObject debuffUI;
 
     [Header("Player Material")]
     [SerializeField] Material playerMat;
@@ -46,6 +46,8 @@ public class StatusManager : MonoBehaviour
     };
 
     private bool isSuffering = false;
+
+    public bool isShakingCamera { get; private set; } = false;
 
     private void Awake()
     {
@@ -114,22 +116,26 @@ public class StatusManager : MonoBehaviour
 
         isSuffering = true;
 
-        int debuffDice = UnityEngine.Random.Range(1, 7);
+        int debuffDice = UnityEngine.Random.Range(3, 5);
 
         if (debuffDice <= 2)
         {
             GameManager.GetInstance().BlurScreen(true);
             setDebuffImage(0);
+            HintManager.GetInstance().ShowMission("一陣昏沉疲勞，頭痛，看不清眼前的東西……");
         }
         else if (3 <= debuffDice && debuffDice <= 4)
         {
+            isShakingCamera = true;
             GameManager.GetInstance().ShakeCamera(3f);
             setDebuffImage(1);
+            HintManager.GetInstance().ShowMission("一時間身體無法平衡，有種天旋地轉的感覺，好像有點想吐……");
         }
         else if (5 <= debuffDice && debuffDice <= 6)
         {
             GameManager.GetInstance().SetReverseInput(true);
             setDebuffImage(2);
+            HintManager.GetInstance().ShowMission("手腳突然不受控制，竟不聽大腦使喚……");
         }
 
         StartCoroutine(Reset(debuffDuration));
@@ -154,6 +160,7 @@ public class StatusManager : MonoBehaviour
         GameManager.GetInstance().SetReverseInput(false);
         debuffUI.SetActive(false);
 
+        isShakingCamera = false;
         isSuffering = false;
     }
 

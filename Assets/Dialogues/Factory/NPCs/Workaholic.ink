@@ -161,16 +161,20 @@ VAR attitudeOfWorkaholic = 0
         ~ ShowImage(16)
         咦？這張照片…… #speaker: Layne #portrait: Layne #layout: left
         
+        ~ PlaySound("pick up")
         ~ HideImage()
         這個邊角料就給你吧，反正我也用不上了。可以用來……  #speaker: 工作狂 #portrait: Workaholic #layout: right
         
+- ~ ShowBlackScreen()
 - （突然一陣精神恍惚，頭腦昏沉，等你回過神來，發現自己已經跟Skyler會合了） # speaker: 腦內的聲音 #portrait: Narrator #layout: left
 
 ~ PickupFromNPC(0)
 ~ PickupFromNPC(1)
 ~ RemoveFromNPC(1)
 ~ RemoveFromNPC(2)
+
 ~ hasTriggeredFindPreciousMaterials = true
+
 ~ TeleportPlayer(12, -1.1, 3.77)
 
 -> DONE

@@ -110,6 +110,16 @@ public class InkExternalFunctions
             HideCG();
         });
 
+        story.BindExternalFunction("ShowBlackScreen", () =>
+        {
+            ShowBlackScreen();
+        });
+
+        story.BindExternalFunction("HideBlackScreen", () =>
+        {
+            HideBlackScreen();
+        });
+
         story.BindExternalFunction("TeleportPlayer", (float x, float y, float z) =>
         {
             TeleportPlayer(x, y, z);
@@ -181,6 +191,8 @@ public class InkExternalFunctions
             "ChangeScene",
             "ShowCG",
             "HideCG",
+            "ShowBlackScreen",
+            "HideBlackScreen",
             "TeleportPlayer",
             "StartSpawnBlocks",
             "StopSpawnBlocks",
@@ -308,7 +320,7 @@ public class InkExternalFunctions
     public void PlaySound(string soundName)
     {
         string[] soundNames = {
-            "alarm", "beep", "click",
+            "alarm", "beep", "pick up",
             "explosion", "fire", "hatch open",
             "paper", "radar", "radio",
             "submarine", "underwater bubble", "unlock"
@@ -387,6 +399,16 @@ public class InkExternalFunctions
         DialogueManager DialogueManagerInstance = DialogueManager.GetInstance();
         GameObject CGBackground = DialogueManagerInstance.CGBackground;
         CGBackground.SetActive(false);
+    }
+
+    public void ShowBlackScreen()
+    {
+        BlackScreenToggle.GetInstance().ShowBlackScreen();
+    }
+
+    public void HideBlackScreen()
+    {
+        BlackScreenToggle.GetInstance().HideBlackScreen();
     }
 
     public void TeleportPlayer(float x, float y, float z)

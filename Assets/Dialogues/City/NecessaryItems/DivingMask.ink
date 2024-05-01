@@ -7,6 +7,7 @@ INCLUDE ../../ExternalFunctions.ink
 
 如強化玻璃或耐用的塑料，以確保潛水者能夠清晰地觀察水下環境。
 
+~ PlaySound("pick up")
 ~ Pickup()
 
 ~ getDivingMask = true

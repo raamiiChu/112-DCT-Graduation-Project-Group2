@@ -11,8 +11,10 @@ INCLUDE ../../ExternalFunctions.ink
 
 在撈取珍貴原料的途中，你發現了一張舊照片，出於好奇你決定將它收進背包。
 
-~ Pickup()
+~ PlaySound("pick up")
 
 獲得物品：珍貴原料、舊照片
+
+~ Pickup()
 
 -> END

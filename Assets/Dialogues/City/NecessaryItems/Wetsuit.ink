@@ -7,6 +7,7 @@ INCLUDE ../../ExternalFunctions.ink
 
 通常由高科技的材料如氯丁橡膠、氨綸、尼龍等製成，潛水衣在水下扮演著保護身體免受溫度變化和水壓的重要角色。
 
+~ PlaySound("pick up")
 ~ Pickup()
 
 ~ getWetsuit = true

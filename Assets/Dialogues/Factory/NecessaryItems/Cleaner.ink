@@ -13,8 +13,10 @@ INCLUDE ../../ExternalFunctions.ink
 
 ~ ShowMission("完成任務：尋找清潔劑")
 
-~ Pickup()
+~ PlaySound("pick up")
 
 獲得物品：清潔劑
+
+~ Pickup()
 
 -> END

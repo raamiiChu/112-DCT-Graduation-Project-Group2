@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
             // 1. inventory is opening 
             // 2. game is pausing
             // 3. player is cheating
-            // 4. player cam is enabled 
+            // 4. player cam is not enabled 
             // 5. dialogue is playing
             if (
                 inventoryIsOpen || isPause || isCheat ||
@@ -108,6 +108,10 @@ public class GameManager : MonoBehaviour
 
                 // set player animation as default
                 playerAnimator.Play("Idle");
+            }
+            else if (StatusManager.GetInstance().isShakingCamera)
+            {
+                playerCamera.GetComponent<ThirdPersonOrbitCamBasic>().enabled = false;
             }
             else
             {
@@ -231,19 +235,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        // if (sceneName == "Credits" || sceneName == "Start")
-        // {
-        //     
-        //     Time.timeScale = 0;
-        //     SceneManager.LoadScene(sceneName);
-        //     Destroy(UICanvas);
-        //     Destroy(EventSystem);
-        //     Destroy(Managers);
-
-        //     Time.timeScale = 1;
-        //     return;
-        // }
-
         StartCoroutine(SceneTransition(sceneName));
     }
 
@@ -295,7 +286,7 @@ public class GameManager : MonoBehaviour
     private void ResetPlayer(string sceneName)
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        playerCamera = player.transform.Find("Player Camera").gameObject;
+        playerCamera = GameObject.FindGameObjectWithTag("MainCamera");
         playerAnimator = player.GetComponent<Animator>();
 
         switch (sceneName)
@@ -340,7 +331,7 @@ public class GameManager : MonoBehaviour
 
     public void ShakeCamera(float duration)
     {
-        playerCamera.GetComponent<Camera>().DOShakePosition(duration, new Vector3(0.25f, 0, 0.25f));
+        playerCamera.GetComponent<Camera>().DOShakePosition(duration, new Vector3(0.5f, 0, 0.5f));
     }
 
     public void SetReverseInput(bool value)

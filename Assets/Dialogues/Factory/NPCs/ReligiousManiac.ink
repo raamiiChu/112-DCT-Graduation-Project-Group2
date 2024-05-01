@@ -66,10 +66,12 @@ VAR attitudeOfReligiousManiac = 0
 噢，每部經典我都擁有三本，一本每天翻閱、一本好好收藏、一本按神的意志流向不同的地方，而你將依循神的指引，找到流落在廢棄區的經典。 # speaker: 宗教狂 #portrait: ReligiousManiac #layout: right
 
 ~ ShowMission("接受任務：尋找教典")
+~ ShowBlackScreen()
 
 去吧，願主與你同在。 # speaker: 宗教狂 #portrait: ReligiousManiac #layout: right
 
 ~ TeleportPlayer(18.5, -0.5, -30)
+~ HideBlackScreen()
 
 -> DONE
 
@@ -80,9 +82,11 @@ VAR attitudeOfReligiousManiac = 0
 
 光聽他講話就會掉 SAN 的可怕人物 # speaker: Layne #portrait: Layne #layout: left
 
+~ ShowBlackScreen()
 趕緊找到教典把他打發走吧 ......
 
 ~ TeleportPlayer(18.5, -0.5, -30)
+~ HideBlackScreen()
 
 -> DONE
 
