@@ -33,9 +33,11 @@ Layne ，幹嘛？
     * * [輸入：9618]
         ~ ModifySanity(5)
         ~ ModifyMelancholy(-5)
-        ~ PlaySound("click")
+        ~ PlaySound("pick up")
         
         你選擇相信 Skyler # speaker: 腦內的聲音 #portrait: Narrator #layout: left
+        
+        密碼門傳來了動靜。一座高聳的教堂矗立在你眼前。 # speaker: 腦內的聲音 #portrait: Narrator #layout: left
         
         ~ ChangeScene("Church")
         ~ Disappear()
@@ -44,9 +46,11 @@ Layne ，幹嘛？
     * * {passwordOnWall}[輸入：4135] 
         ~ ModifySanity(-10)
         ~ ModifyMelancholy(-5)
-        ~ PlaySound("click")
+        ~ PlaySound("pick up")
         
         你選擇不相信 Skyler # speaker: 腦內的聲音 #portrait: Narrator #layout: left
+        
+        密碼門傳來了動靜。一座高聳的教堂矗立在你眼前。 # speaker: 腦內的聲音 #portrait: Narrator #layout: left
         
         ~ ChangeScene("Church")
         ~ Disappear()

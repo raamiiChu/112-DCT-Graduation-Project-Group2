@@ -208,6 +208,7 @@ Rene 你在外面做什麼？趕快進來呀！
 （你的腦袋飛快地運轉，將當初你放置在那還沒有安裝的部件，使用從前對於藍圖線路的記憶拼接起來。）
 
 ~ ShowCG(17)
+~ PlaySound("submarine")
 
 # speaker: Layne #portrait: Layne #layout: left
 完成了！

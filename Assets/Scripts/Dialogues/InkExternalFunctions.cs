@@ -319,6 +319,8 @@ public class InkExternalFunctions
 
     public void PlaySound(string soundName)
     {
+        soundName = soundName.ToLower().Trim();
+
         string[] soundNames = {
             "alarm", "beep", "pick up",
             "explosion", "fire", "hatch open",

@@ -60,7 +60,12 @@ public class DialogueTrigger : MonoBehaviour
     void Update()
     {
         // avoid to trigger dialogue again until the current dialogue is finished
-        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+        // make sure not to trigger dialogue twice, when waiting for scene-changing
+        if (
+            playerInRange &&
+            !DialogueManager.GetInstance().dialogueIsPlaying &&
+            !GameManager.GetInstance().isChangingScene
+        )
         {
             player = GameManager.GetInstance().player;
 

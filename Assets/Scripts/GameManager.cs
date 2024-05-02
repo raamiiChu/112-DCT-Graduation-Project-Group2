@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     private bool reverseInput = false;
     private bool isPause = false;
     private bool isCheat = false;
-    private bool isChangingScene = false;
+    public bool isChangingScene { get; private set; } = false;
 
     private void Awake()
     {
