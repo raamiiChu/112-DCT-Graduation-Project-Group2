@@ -7,6 +7,7 @@ INCLUDE ../../ExternalFunctions.ink
 # speaker: Layne #portrait: Layne #layout: left
 是妹妹最喜歡的玩具 ……
 
+~ ShowBlackScreen()
 ~ TriggerAppear()
 ~ PlaySound("pick up")
 ~ Pickup()

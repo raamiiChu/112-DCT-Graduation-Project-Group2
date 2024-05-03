@@ -1,10 +1,18 @@
 INCLUDE ../../Globals.ink
 INCLUDE ../../ExternalFunctions.ink
 
+~ HideBlackScreen()
 ~ ShowParticleThenRene()
+~ HideLayne()
 
 # speaker: 腦內的聲音 #portrait: Narrator #layout: left
-拿起來之後直接進入過場動畫，妹妹（光點）變成人形。想起了自己之前是首席工程師，父母過世之後忙於工作，疏於照顧妹妹 & 家裡好像有一台之前做的潛水艇
+拿起來之後直接進入過場動畫，妹妹（光點）變成人形。
+
+你想起了自己之前是 Alpha 計畫的首席工程師。
+
+自父母過世之後便忙於工作，疏於照顧妹妹。
+
+家裡好像有一台之前做的潛水艇。
 
 ~ ShowBlackScreen()
 

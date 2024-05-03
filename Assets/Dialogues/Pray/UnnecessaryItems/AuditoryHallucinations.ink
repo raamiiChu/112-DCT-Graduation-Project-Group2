@@ -11,6 +11,8 @@ Layne 真是……慢……
 
 為什麼你每次都要.......？
 
+~ ModifySanity(-5)
+~ ModifyMelancholy(5)
 ~ Disappear()
 
 -> END
