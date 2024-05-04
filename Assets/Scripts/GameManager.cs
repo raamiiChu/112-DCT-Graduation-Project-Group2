@@ -244,7 +244,7 @@ public class GameManager : MonoBehaviour
 
         Credits.SetActive(true);
 
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(30f);
 
         ToStartScene();
     }
