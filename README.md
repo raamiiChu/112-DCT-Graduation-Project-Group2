@@ -9,7 +9,9 @@ This is a group graduation project for DCT of NCCU, Taiwan; it has **No Commerci
 
 - Official Website: https://dct15thbe.com/work02/  
 
-- Organization: The Digital Content and Technologies ( DCT ) Program of National Chengchi University, Taiwan  
+- Organization: The Digital Content and Technologies ( DCT ) Program of National Chengchi University, Taiwan
+
+- Unity Version: 2022.3.7f1  
 
 
 # Special Thanks
